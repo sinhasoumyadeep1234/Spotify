@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+  </head>
+  <body>
+    <!-- <img src="logo.svg" alt=""> -->
+    <!-- if we closely see the spotify website it is divided into two parts left and right thus creating two parts left and right-->
+    <div class="container flex bg-black">
+      <div class="left">
+        <div class="close">
+          <img class="invert" width="30px" src="images/cross.svg" alt="" />
+        </div>
+        <!-- inside the left box we can see two boxes one home and another library -->
+        <div class="home bg-grey rounded m-1 p-1">
+          <!-- logo -->
+          <div class="logo">
+            <img class="invert" width="120" src="images/logo.svg" alt="SpotifyLogo" />
+          </div>
+          <ul>
+            <li><img class="invert" src="images/home.svg" alt="Home" />Home</li>
+            <li><img class="invert" src="images/search.svg" alt="Home" />Search</li>
+          </ul>
+        </div>
+        <!-- library part -->
+        <div class="library bg-grey rounded m-1 p-1">
+          <div class="heading">
+            <img src="images/playlisticon.svg" class="invert" alt="playlisticon" />
+            <h2>Your Library</h2>
+          </div>
+          <div class="songList">
+            <ul>
+              <!-- song name will be added dynamically using js -->
+            </ul>
+          </div>
+
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/end-user-agreement/"
+                ><span>Legal</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/privacy"
+                ><span>Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                ><span>About Us</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/in-en/accessibility"
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
+          <!--footer ends here-->
+        </div>
+        <!--library ends here-->
+      </div>
+      <!--left ends here-->
+
+      <div class="right bg-grey rounded">
+        <!-- header contains two svg arrows and button -->
+        <div class="header">
+          <div class="nav">
+            <div class="hamburger-container">
+              <img
+                width="40px"
+                class="invert hamburger"
+                src="images/hamburger.svg"
+                alt=""
+              />
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18"
+                  stroke="#ffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                  stroke="#ffff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="buttons">
+            <button class="signup-btn">Sign up</button>
+            <button class="login-btn">Log in</button>
+          </div>
+        </div>
+        <!--header ends here-->
+
+        <div class="spotify-playlist">
+          <h1>Spotify Playlists</h1>
+          <div class="cardContainer"></div>
+        </div>
+          <!--card container ends here-->
+
+          <div class="playbar">
+            <div class="seekbar">
+              <div class="circle">
+                <!-- circle that accelerates when song starts playing over the seekbar -->
+              </div>
+            </div>
+            <div class="above-bar">
+              <!-- Song Info -->
+              <div class="song-info"></div>
+              <!-- song buttons -->
+              <div class="song-buttons">
+                <img width="35" id="previous" src="images/previous.svg" alt="" />
+                <img width="35" id="play" src="images/play.svg" alt="" />
+                <img width="35" id="next" src="images/next.svg" alt="" />
+              </div>
+
+              <!-- Song duration/time and volume -->
+              <div class="timeAndVol">
+                <div class="song-time"></div>
+                <div class="volume">
+                  <img width="25px" src="images/volume.svg" alt="" />
+                  <!-- volume seekbar -->
+                  <div class="range">
+                    <input type="range" name="volume" id="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--spotify playlist ends here-->
+      </div>
+      <!--right ends here-->
+    </div>
+    <!--container ends here-->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
